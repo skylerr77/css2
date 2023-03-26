@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.contenedor{
+    height: 100%;
+    width: 100%;
+    padding: 2%;
+}
+.grid{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-gap: 1%;
+    grid-template-rows: 2fr 2fr 2fr 2fr 2fr ;
+}
+header{
+    display: grid;
+    place-items: center;
+    grid-row: 1;
+    background-color: yellow;
+}
+nav{
+    display: grid;
+    place-items: center;
+    grid-row: 2;
+    background-color: green;
+}
+.aside{
+    display: grid;
+    place-items: center;
+    grid-row: 3;
+    background-color: red;
+
+}
+.section{
+    display: grid;
+    text-align: center;
+    grid-row: 4;
+    background-color: orange;
+    grid-gap: 1%;
+    grid-template-rows: repeat(3,1fr);
+}
+article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 2%;
+}
+footer{
+    display: grid;
+    place-items: center;
+    grid-row: 5;
+    background-color: pink;
+}
+@media (min-width:768px){
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1%;
+        grid-template-rows: 2fr 2fr 4fr 2fr;
+    }
+    header{
+        display: grid;
+        place-items: center;
+        grid-row: 1;
+        grid-column: 1/4;
+        background-color: violet;
+    }
+    nav{
+        display: grid;
+        place-items: center;
+        grid-column: 1/4;
+        grid-row: 2;
+        background-color: green;
+    }
+    .section{
+        display: grid;
+        text-align: center;
+        grid-column: 2/3;
+        grid-row: 3;
+        background-color: orange;
+        grid-template-rows: repeat(3,1fr);
+    }
+    article{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: gray;
+        width: 80%;
+        margin-left: 10%;
+        padding: 5%;
+        margin-top: 2%;
+    }
+    footer{
+        display: grid;
+        place-items: center;
+        grid-column: 1/4;
+        grid-row: 4;
+        background-color: pink;
+    }
+}
